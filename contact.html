@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Michael Johnson Photography</title>
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/contact.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="contact__content">
+        <div class="contact__left">
+          <h1>Contact Me</h1>
+          <p>
+            If you'd like to get in touch for photography inquiries or
+            collaborations, feel free to send a message.
+          </p>
+        </div>
+        <div class="contact__right">
+          <form class="contact__form" action="#" method="POST">
+            <div class="form__group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form__group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="form__submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

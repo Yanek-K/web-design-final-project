@@ -1,0 +1,348 @@
+@charset "utf-8";
+
+/*
+  Comp 2681 - Web Site Design and Development 
+  (Winter 2024 Sharma)
+
+  Style Sheet for My Personal Website
+  Author: Yanek Keshavjee
+  Date: August 15, 2024
+
+  Filename: styles.css
+
+*/
+
+/* HTML and Body Styles */
+
+:root {
+  --base: #0f161b;
+  --orange: #ff9900;
+  --slate: #8892b0;
+  --white: #e6f1ff;
+  --primary-font-family: "Anton", sans-serif;
+  --secondary-font-family: "Work Sans", sans-serif;
+  --padding-small: 1rem;
+  --padding-medium: 4rem;
+  --padding-large: 6rem;
+  --padding-xlarge: 8rem;
+  --margin-sm: 1rem 10rem 3rem 2rem;
+  --margin-standard: 3rem 9rem 1rem 11rem;
+}
+
+body {
+  font-family: var(--primary-font-family);
+  line-height: 1.6;
+  color: var(--slate);
+  background-color: var(--base);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 0.6rem solid white;
+  box-sizing: border-box;
+  height: auto;
+  letter-spacing: 0.08rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  max-width: 180px;
+  background-color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--orange);
+  border-radius: 40px;
+  color: var(--base);
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+}
+
+.button:hover {
+  color: var(--base);
+  transform: scale(1.08);
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+p {
+  font-family: var(--secondary-font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+}
+
+/* ********* NAVBAR STYLES ********** */
+
+.navbar {
+  color: var(--white);
+  align-items: center;
+  z-index: 1010;
+  position: sticky;
+  top: 0;
+  background-color: var(--base);
+  width: 100%;
+  position: relative;
+  padding: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+}
+
+.navbar__wrap__left > a img {
+  cursor: pointer;
+  max-width: 60px;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.submenuTitle .line {
+  width: 25px;
+  height: 2px;
+  background-color: var(--white);
+  margin: 4px;
+}
+
+ul.submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  background-color: var(--slate);
+  top: 80px;
+  right: 0;
+  width: 30%;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+ul.submenu li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+ul.submenu li:last-child {
+  border-bottom: none;
+}
+
+.burger-menu:hover ul.submenu {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding-left: 8rem;
+    padding-right: 5rem;
+  }
+
+  .navbar__wrap__left > img {
+    width: 50px;
+  }
+}
+
+/* Mobile-first default styling */
+
+/* General container for hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Large background text */
+.hero__background-text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-60%); /* Adjust to truly center vertically */
+  font-size: 13vw; /* Dynamic font size relative to viewport width */
+  font-weight: 900; /* Make it bold */
+  color: rgba(255, 255, 255, 0.04); /* Subtle white with low opacity */
+  z-index: 0; /* Ensure it stays behind other content */
+  white-space: nowrap; /* Prevents the text from breaking into two lines */
+  pointer-events: none; /* Ensure it's not clickable */
+  user-select: none; /* Prevent text from being selectable */
+}
+
+/* Adjust the z-index of .hero__wrap to place it above the text */
+.hero__wrap {
+  position: relative;
+  z-index: 1; /* Ensure content appears above the background text */
+}
+
+.hero__wrap {
+  width: 50%;
+}
+
+/* Left side of hero section (text) */
+.hero__wrap__left {
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding: 0;
+}
+
+.hero__wrap__intro {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.hero__wrap__name {
+  font-size: 4.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.hero__wrap__byline {
+  margin-bottom: 0.4rem;
+}
+
+.hero__wrap__social {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+.hero__wrap__social p {
+  display: inline;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Right side of hero section (image) */
+.hero__wrap__right {
+  margin: 20px;
+  width: 90%;
+}
+
+.hero__wrap__right img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0.4rem 0;
+}
+
+/* Media Queries for larger screens (Tablets and Desktops) */
+@media (min-width: 950px) {
+  /* Layout changes to side-by-side */
+  .body {
+    height: 100vh;
+  }
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+    height: calc(100vh - 150px); /* Subtract the navbar height */
+  }
+
+  .hero__wrap__left {
+    flex-grow: 3; /* Allows the left section to grow */
+    text-align: left;
+    margin-right: 3rem;
+    padding-left: 2rem; /* Initial padding */
+    transition: padding-left 0.5s ease; /* Smooth transition for text movement */
+  }
+
+  .hero__wrap__right {
+    flex-grow: 1;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__wrap__right img {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .hero__wrap__right img:not(:first-of-type) {
+    display: none;
+  }
+
+  .hero__wrap__name {
+    /* font-size: 48px; */
+  }
+
+  .hero__wrap__social {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Media Query for very large screens */
+@media (min-width: 1200px) {
+  .hero__wrap__left {
+    flex-grow: 4; /* Left section grows more */
+    padding-left: 8rem; /* Move text further right */
+  }
+
+  .hero__wrap__right {
+    flex-grow: 1;
+  }
+
+  .hero__wrap__name {
+    /* font-size: 56px; */
+  }
+}
+
+/* Extra-large screen */
+@media (min-width: 1600px) {
+  .hero__wrap__left {
+    padding-left: 18rem; /* Move text even further right on very large screens */
+  }
+}

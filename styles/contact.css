@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+  font-family: var(--primary-font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--base);
+  color: var(--slate);
+}
+
+/* Contact Section */
+.contact {
+  padding: 30px 20px;
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contact Left - Text Section */
+.contact__left {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact__left h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.contact__left p {
+  font-size: 18px;
+  color: var(--slate);
+}
+
+/* Contact Right - Form Section */
+.contact__form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group {
+  margin-bottom: 15px;
+}
+
+.form__group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+  color: var(--white);
+}
+
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--slate);
+  border-radius: 5px;
+  background-color: var(--base);
+  color: var(--white);
+}
+
+.form__submit {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form__submit:hover {
+  background-color: darken(var(--orange), 10%);
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+  .contact__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact__left {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 0;
+    padding-right: 40px;
+  }
+
+  .contact__right {
+    flex: 1;
+    text-align: left;
+  }
+}

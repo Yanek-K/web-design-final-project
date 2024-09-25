@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+  font-family: var(--primary-font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--base);
+  color: var(--slate);
+}
+
+.about {
+  padding: 50px 0;
+}
+
+/* Center Image with Overlay Text */
+.about__wrap__center-image {
+  position: relative;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about__image__center {
+  width: 30%; /* Reduce the width to 70% of the container */
+  height: auto;
+  max-width: 600px; /* Ensure it doesn't exceed 1000px */
+  /* object-fit: cover; */
+  margin: 0 auto;
+}
+
+.about__image-overlay {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  color: var(--white);
+  text-align: left;
+}
+
+.about__photographer-name {
+  font-size: 5vw; /* Responsive font size */
+  font-weight: 700;
+}
+
+.about__photographer-byline {
+  font-size: 1.5vw; /* Responsive font size */
+  font-weight: 400;
+}
+
+/* Right-Aligned Text with Vertical Line */
+.about__wrap__text-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 60px 10%;
+}
+
+.about__text-line {
+  display: flex;
+  align-items: center;
+}
+
+.about__vertical-line {
+  height: 100px;
+  width: 2px;
+  background-color: var(--white);
+  margin-right: 20px;
+}
+
+.about__description-right {
+  font-size: 18px;
+  color: var(--slate);
+}
+
+/* Left-Aligned Text */
+.about__wrap__text-left {
+  text-align: left;
+  margin: 60px 10%;
+}
+
+.about__description-left {
+  font-size: 18px;
+  color: var(--slate);
+}
+
+/* Right Image with Text Overlay */
+.about__wrap__right-image {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about__image__right {
+  width: 70%; /* Reduce the width to 70% of the container */
+  height: auto;
+  max-width: 700px; /* Ensure it doesn't exceed 700px */
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.about__image-overlay-right {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: var(--white);
+  text-align: left;
+}
+
+.about__description-overlay-right {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about__image__center,
+  .about__image__right {
+    width: 90%; /* On smaller screens, make the images fill more of the width */
+  }
+
+  .about__image-overlay {
+    right: 5%;
+  }
+
+  .about__vertical-line {
+    height: 80px;
+  }
+
+  .about__image-overlay-right {
+    left: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Center Image with Overlay Text */
+  .about__wrap__center-image {
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .about__image__center {
+    width: 80%; /* Slightly larger on larger screens */
+    height: auto;
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto;
+  }
+
+  .about__image-overlay {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Overlay text on the right */
+    transform: translateY(-50%);
+    color: var(--white);
+    text-align: left;
+  }
+
+  .about__photographer-name {
+    font-size: 6vw; /* Larger responsive text */
+  }
+
+  .about__photographer-byline {
+    font-size: 2vw; /* Larger responsive byline */
+  }
+
+  /* Right-Aligned Text with Vertical Line */
+  .about__wrap__text-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 80px 15%; /* More margin for larger screens */
+  }
+
+  .about__text-line {
+    display: flex;
+    align-items: center;
+  }
+
+  .about__vertical-line {
+    height: 150px; /* Taller vertical line for large screens */
+    width: 3px; /* Slightly thicker */
+    background-color: var(--white);
+    margin-right: 30px;
+  }
+
+  .about__description-right {
+    font-size: 1.8rem; /* Larger text for larger screens */
+    color: var(--slate);
+  }
+
+  /* Left-Aligned Text */
+  .about__wrap__text-left {
+    text-align: left;
+    margin: 80px 15%; /* More margin for larger screens */
+  }
+
+  .about__description-left {
+    font-size: 1.8rem; /* Larger font size */
+    color: var(--slate);
+  }
+
+  /* Right Image with Text Overlay */
+  .about__wrap__right-image {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .about__image__right {
+    width: 70%; /* Adjust size for larger screens */
+    height: auto;
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto;
+  }
+
+  .about__image-overlay-right {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Overlay text to the left of the image */
+    transform: translateY(-50%);
+    color: var(--white);
+    text-align: left;
+  }
+
+  .about__description-overlay-right {
+    font-size: 1.8rem; /* Larger text for the overlay */
+    font-weight: 400;
+  }
+}
