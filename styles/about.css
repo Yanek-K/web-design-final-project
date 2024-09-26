@@ -7,222 +7,225 @@ body {
   color: var(--slate);
 }
 
-.about {
-  padding: 50px 0;
-}
-
-/* Center Image with Overlay Text */
-.about__wrap__center-image {
-  position: relative;
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.about__image__center {
-  width: 30%; /* Reduce the width to 70% of the container */
-  height: auto;
-  max-width: 600px; /* Ensure it doesn't exceed 1000px */
-  /* object-fit: cover; */
-  margin: 0 auto;
-}
-
-.about__image-overlay {
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
-  color: var(--white);
-  text-align: left;
-}
-
-.about__photographer-name {
-  font-size: 5vw; /* Responsive font size */
-  font-weight: 700;
-}
-
-.about__photographer-byline {
-  font-size: 1.5vw; /* Responsive font size */
-  font-weight: 400;
-}
-
-/* Right-Aligned Text with Vertical Line */
-.about__wrap__text-right {
-  display: flex;
-  justify-content: flex-end;
+.about__wrap__hero {
+  margin: 4rem;
   align-items: center;
-  margin: 60px 10%;
+  justify-content: center;
 }
 
-.about__text-line {
-  display: flex;
-  align-items: center;
+.about__hero__image {
+  display: none;
 }
 
-.about__vertical-line {
-  height: 100px;
-  width: 2px;
-  background-color: var(--white);
-  margin-right: 20px;
+.about__wrap__intro {
+  margin: 4rem;
 }
 
-.about__description-right {
-  font-size: 18px;
-  color: var(--slate);
+.about__wrap__experience {
+  margin-top: 2rem;
 }
 
-/* Left-Aligned Text */
-.about__wrap__text-left {
-  text-align: left;
-  margin: 60px 10%;
-}
-
-.about__description-left {
-  font-size: 18px;
-  color: var(--slate);
-}
-
-/* Right Image with Text Overlay */
-.about__wrap__right-image {
-  position: relative;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.about__image__right {
-  width: 70%; /* Reduce the width to 70% of the container */
-  height: auto;
-  max-width: 700px; /* Ensure it doesn't exceed 700px */
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-.about__image-overlay-right {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
+.about__wrap__experience > h2 {
+  font-family: var(--secondary-font-family);
   color: var(--white);
-  text-align: left;
 }
 
-.about__description-overlay-right {
-  font-size: 18px;
-  font-weight: 400;
+.about__wrap__experience > ul li {
+  color: var(--white);
+  list-style-type: none;
+  padding: 0.2rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .about__image__center,
-  .about__image__right {
-    width: 90%; /* On smaller screens, make the images fill more of the width */
-  }
-
-  .about__image-overlay {
-    right: 5%;
-  }
-
-  .about__vertical-line {
-    height: 80px;
-  }
-
-  .about__image-overlay-right {
-    left: 10px;
-  }
+.about__wrap__clients {
+  margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
-  /* Center Image with Overlay Text */
-  .about__wrap__center-image {
-    position: relative;
-    text-align: center;
-    margin-bottom: 100px;
-  }
+.about__wrap__clients > h2 {
+  font-family: var(--secondary-font-family);
+  color: var(--white);
+}
 
-  .about__image__center {
-    width: 80%; /* Slightly larger on larger screens */
-    height: auto;
-    max-width: 1200px; /* Set a maximum width */
-    margin: 0 auto;
-  }
+.about__wrap__clients > ul li {
+  color: var(--white);
+  list-style-type: none;
+  padding: 0.2rem;
+}
+.about__gallery {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
 
-  .about__image-overlay {
-    position: absolute;
-    top: 50%;
-    right: 10%; /* Overlay text on the right */
-    transform: translateY(-50%);
-    color: var(--white);
-    text-align: left;
-  }
+.about__gallery__images {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
 
-  .about__photographer-name {
-    font-size: 6vw; /* Larger responsive text */
-  }
+.about__gallery__images > img {
+  height: 50%;
+  width: 40%;
+}
 
-  .about__photographer-byline {
-    font-size: 2vw; /* Larger responsive byline */
-  }
+.about__wrap__quote {
+  margin: 2rem;
+}
 
-  /* Right-Aligned Text with Vertical Line */
-  .about__wrap__text-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 80px 15%; /* More margin for larger screens */
-  }
+.quote__image > img {
+  height: 50%;
+  width: 40%;
+}
 
-  .about__text-line {
+@media only screen and (min-width: 950px) {
+  .about__wrap {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
   }
 
-  .about__vertical-line {
-    height: 150px; /* Taller vertical line for large screens */
-    width: 3px; /* Slightly thicker */
-    background-color: var(--white);
-    margin-right: 30px;
+  .about__wrap__hero {
+    display: flex;
+    margin-bottom: 14rem;
   }
 
-  .about__description-right {
-    font-size: 1.8rem; /* Larger text for larger screens */
-    color: var(--slate);
-  }
-
-  /* Left-Aligned Text */
-  .about__wrap__text-left {
-    text-align: left;
-    margin: 80px 15%; /* More margin for larger screens */
-  }
-
-  .about__description-left {
-    font-size: 1.8rem; /* Larger font size */
-    color: var(--slate);
-  }
-
-  /* Right Image with Text Overlay */
-  .about__wrap__right-image {
-    position: relative;
-    text-align: center;
-    margin-top: 100px;
-  }
-
-  .about__image__right {
-    width: 70%; /* Adjust size for larger screens */
-    height: auto;
-    max-width: 800px; /* Set a maximum width */
-    margin: 0 auto;
-  }
-
-  .about__image-overlay-right {
+  .about__hero__image {
+    display: block;
     position: absolute;
-    top: 50%;
-    left: 10%; /* Overlay text to the left of the image */
-    transform: translateY(-50%);
-    color: var(--white);
-    text-align: left;
+    left: 30%;
+    z-index: 100;
   }
 
-  .about__description-overlay-right {
-    font-size: 1.8rem; /* Larger text for the overlay */
-    font-weight: 400;
+  .about__hero__image > img {
+    width: 400px;
+    height: 500px;
+  }
+
+  .about__hero__text {
+    width: 40%;
+    color: white;
+    font-family: var(--secondary-font-family);
+    letter-spacing: 0.03rem;
+    position: relative;
+    z-index: 101;
+    left: 300px;
+    top: 130px;
+  }
+
+  .about__wrap__intro {
+    width: 80%;
+    margin-top: 21rem;
+  }
+
+  .intro {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    position: relative;
+  }
+
+  .intro__left {
+    width: 2px; /* Line width */
+    height: 9rem; /* Line height */
+    background-color: var(--white); /* Color of the line */
+    position: absolute;
+    top: 72%; /* Center vertically */
+    left: 55%; /* Center horizontally */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Adjust to make sure it's perfectly centered */
+  }
+
+  .intro__right {
+    color: var(--white);
+    left: 54%;
+    position: absolute;
+    max-width: 50%; /* Limit text width */
+    margin-left: 2rem; /* Space between the line and the text */
+    padding-left: 1rem;
+  }
+
+  .about__wrap__experience {
+    margin-top: 6rem;
+    transform: translateX(-10rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__wrap__experience h2 {
+    font-size: 2rem;
+    margin-right: 5rem;
+    letter-spacing: 0.01rem;
+  }
+
+  .about__wrap__experience > ul {
+    margin-top: 5rem;
+  }
+
+  .about__wrap__experience > ul li {
+    padding: 0.2rem 0.1rem;
+    font-family: var(--secondary-font-family);
+  }
+
+  .about__gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    margin-top: 8rem; /* Optional: Adjust to add space above */
+  }
+
+  .about__gallery__images {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    display: flex;
+    gap: 4rem; /* Create 4rem of space between the two images */
+  }
+
+  .about__gallery__images img {
+    width: 60%;
+    height: auto;
+  }
+
+  .about__wrap__clients {
+    margin-top: 3rem;
+    transform: translateX(13rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__wrap__clients h2 {
+    font-size: 2rem;
+    margin-right: 5rem;
+    letter-spacing: 0.01rem;
+  }
+
+  .about__wrap__clients > ul {
+    margin-top: 5rem;
+  }
+
+  .about__wrap__clients > ul li {
+    padding: 0.2rem 0.1rem;
+    font-family: var(--secondary-font-family);
+  }
+
+  .about__wrap__quote {
+    margin-top: 8rem;
+    transform: translateX(22rem);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__wrap__quote img {
+    width: 60%;
+    height: auto;
   }
 }
