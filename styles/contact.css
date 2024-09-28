@@ -6,20 +6,22 @@
 .contact__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* Contact Left - Text Section */
 .contact__left {
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
 }
 
-.contact__left h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
+.contact__left > h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
   color: var(--white);
 }
 
@@ -82,17 +84,17 @@
 }
 
 /* Media Query for Larger Screens */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .contact__content {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .contact__left {
     flex: 1;
     text-align: left;
+    margin: 2rem;
     margin-bottom: 0;
     padding-right: 40px;
   }
@@ -100,5 +102,6 @@
   .contact__right {
     flex: 1;
     text-align: left;
+    margin-bottom: 2rem;
   }
 }
