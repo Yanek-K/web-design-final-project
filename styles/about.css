@@ -22,7 +22,7 @@ body {
 }
 
 .about__wrap__experience {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .about__wrap__experience > h2 {
@@ -31,13 +31,14 @@ body {
 }
 
 .about__wrap__experience > ul li {
+  font-size: 1rem;
   color: var(--white);
   list-style-type: none;
   padding: 0.2rem;
 }
 
 .about__wrap__clients {
-  margin-top: 2rem;
+  margin: 4rem;
 }
 
 .about__wrap__clients > h2 {
@@ -58,22 +59,29 @@ body {
 
 .about__gallery__images {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 2rem;
 }
 
 .about__gallery__images > img {
   height: 50%;
-  width: 40%;
+  width: 50%;
+  margin-right: 2rem;
 }
 
 .about__wrap__quote {
-  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  margin: 4rem;
+}
+
+.quote > p {
+  font-size: 2rem;
 }
 
 .quote__image > img {
-  height: 50%;
-  width: 40%;
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 950px) {
@@ -92,7 +100,7 @@ body {
   .about__hero__image {
     display: block;
     position: absolute;
-    left: 30%;
+    left: 20%;
     z-index: 100;
   }
 
@@ -108,13 +116,13 @@ body {
     letter-spacing: 0.03rem;
     position: relative;
     z-index: 101;
-    left: 300px;
+    left: 400px;
     top: 130px;
   }
 
   .about__wrap__intro {
     width: 80%;
-    margin-top: 21rem;
+    margin-top: 30rem;
   }
 
   .intro {
@@ -166,6 +174,7 @@ body {
   }
 
   .about__wrap__experience > ul li {
+    font-size: 1.2rem;
     padding: 0.2rem 0.1rem;
     font-family: var(--secondary-font-family);
   }
@@ -193,7 +202,7 @@ body {
 
   .about__wrap__clients {
     margin-top: 3rem;
-    transform: translateX(13rem);
+    transform: translateX(4rem);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -211,13 +220,14 @@ body {
   }
 
   .about__wrap__clients > ul li {
+    font-size: 1.2rem;
     padding: 0.2rem 0.1rem;
     font-family: var(--secondary-font-family);
   }
 
   .about__wrap__quote {
     margin-top: 8rem;
-    transform: translateX(22rem);
+    margin-bottom: 8rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -227,5 +237,23 @@ body {
   .about__wrap__quote img {
     width: 60%;
     height: auto;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .about__hero__image {
+      display: block;
+      position: absolute;
+      left: 30%;
+      z-index: 100;
+    }
+    .about__hero__text {
+      left: 400px;
+      top: 130px;
+    }
+
+    .about__wrap__intro {
+      width: 80%;
+      margin-top: 25rem;
+    }
   }
 }

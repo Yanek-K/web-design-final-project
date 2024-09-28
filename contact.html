@@ -7,41 +7,148 @@
     <link href="styles/reset.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/contact.css" rel="stylesheet" />
+    <script src="yk_formsubmit.js"></script>
   </head>
   <body>
-    <!-- Contact Section  ff-->
+    <header>
+      <div class="navbar">
+        <div class="navbar__wrap">
+          <div class="navbar__wrap__left">
+            <a href="index.html">
+              <img src="images/logo.png" />
+            </a>
+          </div>
+
+          <div class="burger-menu">
+            <a href="#" class="submenuTitle">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </a>
+            <ul class="submenu">
+              <li><a href="about.html">About</a></li>
+              <li><a href="latestShoots.html">Experience</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <section class="contact">
       <div class="contact__content">
         <div class="contact__left">
-          <h1>Contact Me</h1>
-          <p>
-            If you'd like to get in touch for photography inquiries or
-            collaborations, feel free to send a message.
+          <h1>GET IN TOUCH</h1>
+          <p class="hero__wrap__byline">
+            Photographer based in Toronto, Canada
+            <img src="images/canada.png" />
           </p>
+          <div class="hero__wrap__social">
+            <img src="images/instagram.png" />
+            <img src="images/twitter.png" />
+            <img src="images/youtube.png" />
+            <img src="images/facebook.png" />
+          </div>
+        </div>
         </div>
         <div class="contact__right">
-          <form class="contact__form" action="#" method="POST">
-            <div class="form__group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
+          <form
+            class="contact__form"
+            action="http://www.example.com/yk/survey"
+            method="POST"
+            id="cOrder"
+          >
+            <fieldset id="userInfo">
+              <div class="form__group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form__group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form__group">
+                <label for="street">Street Address</label>
+                <input name="street" id="street" type="text" />
+              </div>
+              <div class="form__group">
+                <label for="city">City</label>
+                <input name="city" id="city" type="text" />
+              </div>
+              <div class="form__group">
+                <label for="province">Province</label>
+                <input name="province" id="province" type="text" />
+              </div>
+              <div class="form__group">
+                <label for="postcode">Postal Code</label>
+                <input
+                  name="postcode"
+                  id="postcode"
+                  type="text"
+                  placeholder="nnnnn (-nnnn)"
+                  pattern="^\d{5}(-\d{4})?$"
+                  required
+                />
+              </div>
+              <div class="form__group">
+                <label for="phone">Phone Number</label>
+                <input
+                  name="phone"
+                  id="phone"
+                  type="tel"
+                  required
+                  placeholder="(nnn) nnn-nnnn"
+                  pattern="^\d{10}$|^\(\d{3}\)\s*\d{3}[\s\-]?\d{4}$"
+                />
+              </div>
+              <div class="form__group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+            </fieldset>
+            <div class="button__group">
+              <button type="submit" class="form__submit">Send Message</button>
             </div>
-            <div class="form__group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form__group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="form__submit">Send Message</button>
           </form>
         </div>
       </div>
     </section>
+    <footer class="footer"></footer>
+      <div class="footer__container">
+        <!-- Footer navigation links -->
+        <div class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer contact information -->
+        <div class="footer__contact">
+          <p>Email: michaeljohnson@example.com</p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Location: Toronto, Canada</p>
+        </div>
+
+        <!-- Footer social media links -->
+        <div class="footer__social">
+          <div class="hero__wrap__social">
+            <img src="images/instagram.png" />
+            <img src="images/twitter.png" />
+            <img src="images/youtube.png" />
+            <img src="images/facebook.png" />
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p> 2024 Michael Johnson Photography. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

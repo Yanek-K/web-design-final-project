@@ -10,15 +10,16 @@ body {
 /* Gallery Grid Styles */
 .gallery {
   padding: 50px 0;
+  margin: 0 2rem;
 }
 
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Fixed two columns */
-  grid-auto-rows: 200px; /* Base height for each row */
+  grid-auto-rows: 400px; /* Base height for each row */
   grid-gap: 20px; /* Space between grid items */
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 /* Tiling Image Sizes */
@@ -46,9 +47,11 @@ body {
 }
 
 /* Responsive Adjustments for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .gallery__grid {
+    margin: 4rem;
     grid-template-columns: 1fr; /* Single column on small screens */
+    grid-auto-rows: 400px; /* Base height for each row */
   }
 
   .gallery__item--large,
