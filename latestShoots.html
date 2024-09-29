@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery - Michael Johnson Photography</title>
+    <meta charset="utf-8" />
+    <meta
+      name="keywords"
+      content="fine art photographer, black and white photography, photographer, toronto photography"
+    />
     <link href="styles/reset.css" rel="stylesheet" />
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/latest-shoots.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frederic Franci.</title>
+    <!-- <script src="./homeScript.js" defer></script> -->
   </head>
   <body>
     <header>
@@ -25,9 +38,24 @@
               <div class="line"></div>
             </a>
             <ul class="submenu">
-              <li><a href="about.html">About</a></li>
-              <li><a href="latestShoots.html">Experience</a></li>
-              <li><a href="contact.html">Contact Me</a></li>
+              <div class="submenu__top">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </div>
+              <div class="submenu__bottom">
+                <p class="hero__wrap__byline">
+                  Photographer based in Toronto, Canada
+                  <img src="images/canada.png" />
+                </p>
+                <div class="hero__wrap__social">
+                  <img src="images/instagram.png" />
+                  <img src="images/twitter.png" />
+                  <img src="images/youtube.png" />
+                  <img src="images/facebook.png" />
+                </div>
+              </div>
             </ul>
           </div>
         </div>
@@ -38,25 +66,66 @@
     <section class="gallery">
       <div class="gallery__grid">
         <div class="gallery__item gallery__item--large">
-          <img src="images/1.png" alt="Gallery Image 1" />
+          <img src="images/portrait.png" alt="Gallery Image 1" />
         </div>
         <div class="gallery__item gallery__item--medium">
           <img src="images/1.png" alt="Gallery Image 2" />
         </div>
         <div class="gallery__item gallery__item--small">
-          <img src="images/1.png" alt="Gallery Image 3" />
+          <img src="images/3.png" alt="Gallery Image 3" />
         </div>
         <div class="gallery__item gallery__item--medium">
-          <img src="images/1.png" alt="Gallery Image 4" />
+          <img src="images/6.png" alt="Gallery Image 4" />
         </div>
         <div class="gallery__item gallery__item--large">
-          <img src="images/1.png" alt="Gallery Image 5" />
+          <img src="images/portrait5.png" alt="Gallery Image 5" />
         </div>
         <div class="gallery__item gallery__item--small">
-          <img src="images/1.png" alt="Gallery Image 6" />
+          <img src="images/7.png" alt="Gallery Image 6" />
         </div>
+        <div class="gallery__item gallery__item--large">
+          <img src="images/portrait4.png" alt="Gallery Image 1" />
+        </div>
+        <div class="gallery__item gallery__item--medium">
+          <img src="images/2.png" alt="Gallery Image 2" />
+        </div>
+        <div class="gallery__item gallery__item--small">
+          <img src="images/8.png" alt="Gallery Image 3" />
+        </div>
+
         <!-- Add more gallery items as needed -->
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Footer navigation links -->
+        <div class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer contact information -->
+        <div class="footer__contact">
+          <p>Email: frederic@franci.com</p>
+          <p>Phone: +1 416 291 3821/p></p>
+          <p>Toronto, Canada</p>
+        </div>
+
+        <!-- Footer social media links -->
+        <div class="footer__social">
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; 2024 Frederic Franci Photography. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

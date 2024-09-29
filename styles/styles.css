@@ -159,7 +159,7 @@ ul.submenu {
   top: 0px;
   right: 0;
   width: 40%;
-  height: 100vh;
+  height: 96.5vh;
   border: 1px solid #ddd;
   padding-top: 60px; /* Moves the items down */
 }
@@ -295,7 +295,7 @@ ul.submenu li:last-child {
 
 .hero__wrap__social {
   margin-top: 0rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 .hero__wrap__social > img {
@@ -310,11 +310,11 @@ ul.submenu li:last-child {
 }
 
 .hero__wrap__right img {
-  max-width: 80%;
-  height: auto;
+  max-width: 65%;
+  height: 50%;
   object-fit: cover;
   display: block;
-  margin: 0.4rem auto 1rem;
+  margin: 0rem auto 1rem;
 }
 
 /* Media Queries for larger screens (Tablets and Desktops) */
@@ -329,14 +329,18 @@ ul.submenu li:last-child {
     justify-content: space-between;
     padding: 0 50px;
     box-sizing: border-box;
-    height: calc(100vh - 150px); /* Subtract the navbar height */
+    height: calc(100vh - 180px); /* Subtract the navbar height */
+  }
+
+  .hero__wrap {
+    margin-top: 0rem;
   }
 
   .hero__wrap__left {
     flex-grow: 3; /* Allows the left section to grow */
     text-align: left;
-    margin-right: 3rem;
-    padding-left: 2rem; /* Initial padding */
+    margin-right: 1rem;
+    padding-left: 5rem; /* Initial padding */
     transition: padding-left 0.5s ease; /* Smooth transition for text movement */
   }
 
@@ -349,7 +353,7 @@ ul.submenu li:last-child {
   }
 
   .hero__wrap__right img {
-    width: 100%;
+    width: 70%;
     max-width: 700px;
   }
 
@@ -371,7 +375,7 @@ ul.submenu li:last-child {
 @media (min-width: 1200px) {
   .hero__wrap__left {
     flex-grow: 4; /* Left section grows more */
-    padding-left: 8rem; /* Move text further right */
+    padding-left: 12rem; /* Move text further right */
   }
 
   .hero__wrap__right {
