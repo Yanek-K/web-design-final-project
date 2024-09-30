@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="utf-8" />
-  <meta
-    name="keywords"
-    content="fine art photographer, black and white photography, photographer, toronto photography"
-  />
-  <link href="styles/reset.css" rel="stylesheet" />
-  <link href="styles/styles.css" rel="stylesheet" />
-  <link href='styles/contact.css' rel='stylesheet' />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
-    rel="stylesheet"
-  />
+  <!--
+    Comp 2681 - Web Site Design and Development 
+    (Winter 2024 Sharma)
+    
+    Contact Page of Frederic's Website
+    Author: Yanek Keshavjee
+    Date: September 29, 2024
 
-  <title>Frederic Franci.</title>
-  <!-- <script src="./homeScript.js" defer></script> -->
-</head>
+    Filename: contact.html
+  -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="keywords"
+      content="fine art photographer, black and white photography, photographer, toronto photography"
+    />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/contact.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frederic Franci.</title>
+  </head>
   <body>
     <header>
       <div class="navbar">
@@ -29,7 +39,39 @@
               <img src="images/logo.png" />
             </a>
           </div>
-
+          <nav class="navbar__wrap__right">
+            <ul>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="about.html" title="This leads you to another page">
+                  ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="latestShoots.html"
+                  title="This leads you to another page"
+                >
+                  LATEST SHOOTS</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" title="This leads you to another page">
+                  CONTACT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="crossReference.html"
+                  title="This leads you to another page"
+                >
+                  REFERENCE</a
+                >
+              </li>
+            </ul>
+          </nav>
           <div class="burger-menu">
             <a href="#" class="submenuTitle">
               <div class="line"></div>
@@ -42,6 +84,7 @@
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="crossReference.html">REFERENCE</a></li>
               </div>
               <div class="submenu__bottom">
                 <p class="hero__wrap__byline">
@@ -49,10 +92,18 @@
                   <img src="images/canada.png" />
                 </p>
                 <div class="hero__wrap__social">
-                  <img src="images/instagram.png" />
-                  <img src="images/twitter.png" />
-                  <img src="images/youtube.png" />
-                  <img src="images/facebook.png" />
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.twtitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="Instagram" />
+                  </a>
                 </div>
               </div>
             </ul>
@@ -73,6 +124,12 @@
             <img src="images/twitter.png" />
             <img src="images/youtube.png" />
             <img src="images/facebook.png" />
+          </div>
+          <div class="hero__wrap__social__audio">
+            <audio controls>
+              <source src="media/outOfTown.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
           </div>
         </div>
         <div class="contact__right">
@@ -145,28 +202,41 @@
 
     <footer class="footer">
       <div class="footer__container">
-        <!-- Footer navigation links -->
         <div class="footer__nav">
           <ul class="footer__nav-list">
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="crossReference.html">REFERENCE</a></li>
           </ul>
         </div>
-
-        <!-- Footer contact information -->
         <div class="footer__contact">
-          <p>Email: frederic@franci.com</p>
-          <p>Phone: +1 416 291 3821/p></p>
-          <p>Toronto, Canada</p>
+          <p class="footer__contact-info" data-contact-type="email">
+            Email: frederic@franci.com
+          </p>
+          <p class="footer__contact-info" data-contact-type="phone">
+            Phone: +1 416 291 3821
+          </p>
+          <p class="footer__contact-info" data-contact-type="address">
+            Toronto, Canada
+          </p>
         </div>
-
-        <!-- Footer social media links -->
         <div class="footer__social">
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
-          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <div class="hero__wrap__social">
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.twtitter.com" target="_blank">
+              <img src="images/twitter.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="images/youtube.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="Instagram" />
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__copyright">

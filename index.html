@@ -5,11 +5,11 @@
     Comp 2681 - Web Site Design and Development 
     (Winter 2024 Sharma)
     
-    Home Page of Personal Website
+    Home Page of Frederic's Website
     Author: Yanek Keshavjee
-    Date: August 15, 2024
+    Date: September 29, 2024
 
-    Filename: home.html
+    Filename: index.html
   -->
     <meta charset="utf-8" />
     <meta
@@ -28,7 +28,7 @@
     />
 
     <title>Frederic Franci.</title>
-    <!-- <script src="./homeScript.js" defer></script> -->
+    <script src="./scripts/daysToEvent.js" defer></script>
   </head>
 
   <body id="body">
@@ -40,7 +40,39 @@
               <img src="images/logo.png" />
             </a>
           </div>
-
+          <nav class="navbar__wrap__right">
+            <ul>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="about.html" title="This leads you to another page">
+                  ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="latestShoots.html"
+                  title="This leads you to another page"
+                >
+                  LATEST SHOOTS</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" title="This leads you to another page">
+                  CONTACT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="crossReference.html"
+                  title="This leads you to another page"
+                >
+                  REFERENCE</a
+                >
+              </li>
+            </ul>
+          </nav>
           <div class="burger-menu">
             <a href="#" class="submenuTitle">
               <div class="line"></div>
@@ -53,6 +85,7 @@
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="crossReference.html">REFERENCE</a></li>
               </div>
               <div class="submenu__bottom">
                 <p class="hero__wrap__byline">
@@ -60,10 +93,18 @@
                   <img src="images/canada.png" />
                 </p>
                 <div class="hero__wrap__social">
-                  <img src="images/instagram.png" />
-                  <img src="images/twitter.png" />
-                  <img src="images/youtube.png" />
-                  <img src="images/facebook.png" />
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.twtitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="Instagram" />
+                  </a>
                 </div>
               </div>
             </ul>
@@ -71,22 +112,32 @@
         </div>
       </div>
     </header>
+
     <section class="hero">
       <div class="hero__background-text">Frederic Franci</div>
       <div class="hero__wrap">
         <div class="hero__wrap__left">
           <p class="hero__wrap__intro"></p>
           <h1 class="hero__wrap__name">FREDERIC <br />FRANCI.<br /></h1>
-          <p class="hero__wrap__byline">
+          <p class="hero__wrap__byline drop-cap">
             Photographer based in Toronto, Canada
             <img src="images/canada.png" />
           </p>
           <div class="hero__wrap__social">
-            <img src="images/instagram.png" />
-            <img src="images/twitter.png" />
-            <img src="images/youtube.png" />
-            <img src="images/facebook.png" />
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.twtitter.com" target="_blank">
+              <img src="images/twitter.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="images/youtube.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="Instagram" />
+            </a>
           </div>
+          <div class="hero__wrap__event">DAYS LEFT TO THE BIG EVENT:</div>
         </div>
       </div>
       <div class="hero__wrap__right">
@@ -95,6 +146,49 @@
         </div>
       </div>
     </section>
-    <script src="index.js"></script>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="crossReference.html">REFERENCE</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <p class="footer__contact-info" data-contact-type="email">
+            Email: frederic@franci.com
+          </p>
+          <p class="footer__contact-info" data-contact-type="phone">
+            Phone: +1 416 291 3821
+          </p>
+          <p class="footer__contact-info" data-contact-type="address">
+            Toronto, Canada
+          </p>
+        </div>
+        <div class="footer__social">
+          <div class="hero__wrap__social">
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.twtitter.com" target="_blank">
+              <img src="images/twitter.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="images/youtube.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; 2024 Frederic Franci Photography. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
+  <script src="./scripts/imageSlider.js"></script>
 </html>

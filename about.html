@@ -5,11 +5,11 @@
     Comp 2681 - Web Site Design and Development 
     (Winter 2024 Sharma)
     
-    Home Page of Personal Website
+    About Page of Frederic's Website
     Author: Yanek Keshavjee
-    Date: August 15, 2024
+    Date: September 29, 2024
 
-    Filename: home.html
+    Filename: about.html
   -->
     <meta charset="utf-8" />
     <meta
@@ -29,7 +29,6 @@
     />
 
     <title>Frederic Franci.</title>
-    <!-- <script src="./homeScript.js" defer></script> -->
   </head>
   <body>
     <header>
@@ -40,7 +39,39 @@
               <img src="images/logo.png" />
             </a>
           </div>
-
+          <nav class="navbar__wrap__right">
+            <ul>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="about.html" title="This leads you to another page">
+                  ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="latestShoots.html"
+                  title="This leads you to another page"
+                >
+                  LATEST SHOOTS</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" title="This leads you to another page">
+                  CONTACT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="crossReference.html"
+                  title="This leads you to another page"
+                >
+                  REFERENCE</a
+                >
+              </li>
+            </ul>
+          </nav>
           <div class="burger-menu">
             <a href="#" class="submenuTitle">
               <div class="line"></div>
@@ -53,6 +84,7 @@
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="crossReference.html">REFERENCE</a></li>
               </div>
               <div class="submenu__bottom">
                 <p class="hero__wrap__byline">
@@ -60,10 +92,18 @@
                   <img src="images/canada.png" />
                 </p>
                 <div class="hero__wrap__social">
-                  <img src="images/instagram.png" />
-                  <img src="images/twitter.png" />
-                  <img src="images/youtube.png" />
-                  <img src="images/facebook.png" />
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.twtitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="Instagram" />
+                  </a>
                 </div>
               </div>
             </ul>
@@ -84,10 +124,18 @@
           </p>
 
           <div class="hero__wrap__social">
-            <img src="images/instagram.png" />
-            <img src="images/twitter.png" />
-            <img src="images/youtube.png" />
-            <img src="images/facebook.png" />
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.twtitter.com" target="_blank">
+              <img src="images/twitter.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="images/youtube.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="Instagram" />
+            </a>
           </div>
         </div>
       </div>
@@ -95,16 +143,31 @@
 
     <section class="about__wrap__intro">
       <div class="intro">
+        <div></div>
         <div class="intro__left"></div>
         <div class="intro__right">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </p>
+          <blockquote>
+            In the quiet moments before dawn, where the city’s heartbeat echoes
+            through empty streets, Frederic Franci captures fleeting stories
+            with the timeless lens of black and white film. His photography is
+            not just an art, but a process — a deliberate dance between light
+            and shadow, where every click of the shutter whispers of humanity’s
+            raw and unfiltered essence. Frederic roams the streets, seeking
+            those in-between moments, where the mundane becomes poetic. His work
+            delves into the textures of urban life — cracked sidewalks,
+            glistening rain-soaked pavements, and the silent gaze of a passerby
+            caught in thought. Every photograph is a study of contrast, an
+            interplay of bold blacks and gentle whites, telling stories in their
+            purest form. What makes Frederic’s work truly distinct is not just
+            the images he captures, but the way they are born. Each print is
+            crafted by hand in the darkroom, a space where Frederic surrenders
+            to the alchemy of light and chemicals. Here, under the faint glow of
+            a red lamp, film is transformed into art, one image at a time —
+            tangible, imperfect, and deeply personal. With each photograph,
+            Frederic invites you into his world, a world where the city is a
+            canvas, life is a subject, and black and white film becomes a bridge
+            between past and present.
+          </blockquote>
         </div>
       </div>
 
@@ -138,9 +201,42 @@
       </div>
     </section>
 
+    <section class="about__wrap__intro">
+      <div class="intro">
+        <div class="intro__left" id="second__intro__line"></div>
+        <div class="intro__right" id="second__intro">
+          <blockquote>
+            This photographer is driven by more than the pursuit of aesthetic
+            beauty. He seeks to immortalize those brief flashes of time where
+            light, movement, and emotion align perfectly. For him, photography
+            is not just about creating images but preserving the unspoken
+            stories found in everyday life, on the streets, in fleeting glances,
+            and hidden corners. His goal is simple yet profound: to make people
+            feel, think, and reflect.
+          </blockquote>
+          <ol>
+            <li>
+              Authenticity Seeker: Strives to capture raw, real moments that
+              reveal the true character of his subjects.
+            </li>
+            <li>
+              Handcrafted Artistry: Dedicated to developing every print in the
+              darkroom, creating one-of-a-kind pieces.
+            </li>
+            <li>
+              Master of Black & White: Uses the stark contrast of light and
+              shadow to convey emotion and timelessness.
+            </li>
+            <li>
+              Storyteller of the Streets: Draws inspiration from the streets,
+              seeking to immortalize fleeting moments of human experience.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
     <section class="about__wrap__quote">
       <div class="quote">
-        <!-- <p>THis is a famous quote</p> -->
         <div class="quote__image">
           <img src="images/portrait3.png" />
         </div>
@@ -149,28 +245,41 @@
 
     <footer class="footer">
       <div class="footer__container">
-        <!-- Footer navigation links -->
         <div class="footer__nav">
           <ul class="footer__nav-list">
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="crossReference.html">REFERENCE</a></li>
           </ul>
         </div>
-
-        <!-- Footer contact information -->
         <div class="footer__contact">
-          <p>Email: frederic@franci.com</p>
-          <p>Phone: +1 416 291 3821/p></p>
-          <p>Toronto, Canada</p>
+          <p class="footer__contact-info" data-contact-type="email">
+            Email: frederic@franci.com
+          </p>
+          <p class="footer__contact-info" data-contact-type="phone">
+            Phone: +1 416 291 3821
+          </p>
+          <p class="footer__contact-info" data-contact-type="address">
+            Toronto, Canada
+          </p>
         </div>
-
-        <!-- Footer social media links -->
         <div class="footer__social">
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
-          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <div class="hero__wrap__social">
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.twtitter.com" target="_blank">
+              <img src="images/twitter.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="images/youtube.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="Instagram" />
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__copyright">

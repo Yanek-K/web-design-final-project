@@ -1,3 +1,16 @@
+@charset "utf-8";
+
+/*
+  Comp 2681 - Web Site Design and Development 
+  (Winter 2024 Sharma)
+
+  Style Sheet for My Frederic's Website
+  Author: Yanek Keshavjee
+  Date: September 29, 2024
+
+  Filename: contact.css
+
+*/
 .contact {
   margin: 3rem 0 0 0;
   padding: 30px 20px;
@@ -11,7 +24,6 @@
   margin: 0 auto;
 }
 
-/* Contact Left - Text Section */
 .contact__left {
   text-align: left;
   margin-bottom: 30px;
@@ -30,7 +42,10 @@
   color: var(--slate);
 }
 
-/* Contact Right - Form Section */
+.hero__wrap__social__audio {
+  margin-top: 2rem;
+}
+
 .contact__form {
   width: 100%;
   max-width: 600px;
@@ -83,7 +98,6 @@
   background-color: darken(var(--orange), 10%);
 }
 
-/* Media Query for Larger Screens */
 @media (min-width: 900px) {
   .contact__content {
     flex-direction: row;

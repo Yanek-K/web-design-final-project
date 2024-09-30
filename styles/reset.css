@@ -4,15 +4,14 @@
   Comp 2681 - Web Site Design and Development 
   (Winter 2024 Sharma)
 
-  Reset Style Sheet for My Personal Website
+  Style Sheet for Frederic's Website
   Author: Yanek Keshavjee
-  Date: August 15, 2024
+  Date: September 29, 2024
 
   Filename: reset.css
-
 */
 
-article,
+*/ article,
 aside,
 figcaption,
 figure,
@@ -68,7 +67,7 @@ ul {
 
 html {
   box-sizing: border-box;
-  font-size: 16px; /* Base font size */
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 

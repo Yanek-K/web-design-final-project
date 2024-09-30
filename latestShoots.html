@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+    Comp 2681 - Web Site Design and Development 
+    (Winter 2024 Sharma)
+    
+    Gallery Page of Frederic's Website
+    Author: Yanek Keshavjee
+    Date: September 29, 2024
+
+    Filename: latestShoots.html
+  -->
     <meta charset="utf-8" />
     <meta
       name="keywords"
@@ -19,7 +29,6 @@
     />
 
     <title>Frederic Franci.</title>
-    <!-- <script src="./homeScript.js" defer></script> -->
   </head>
   <body>
     <header>
@@ -30,7 +39,39 @@
               <img src="images/logo.png" />
             </a>
           </div>
-
+          <nav class="navbar__wrap__right">
+            <ul>
+              <li>
+                <a href="index.html">HOME</a>
+              </li>
+              <li>
+                <a href="about.html" title="This leads you to another page">
+                  ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="latestShoots.html"
+                  title="This leads you to another page"
+                >
+                  LATEST SHOOTS</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" title="This leads you to another page">
+                  CONTACT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="crossReference.html"
+                  title="This leads you to another page"
+                >
+                  REFERENCE</a
+                >
+              </li>
+            </ul>
+          </nav>
           <div class="burger-menu">
             <a href="#" class="submenuTitle">
               <div class="line"></div>
@@ -43,6 +84,7 @@
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="crossReference.html">REFERENCE</a></li>
               </div>
               <div class="submenu__bottom">
                 <p class="hero__wrap__byline">
@@ -50,10 +92,18 @@
                   <img src="images/canada.png" />
                 </p>
                 <div class="hero__wrap__social">
-                  <img src="images/instagram.png" />
-                  <img src="images/twitter.png" />
-                  <img src="images/youtube.png" />
-                  <img src="images/facebook.png" />
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.twtitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube.png" alt="Instagram" />
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="Instagram" />
+                  </a>
                 </div>
               </div>
             </ul>
@@ -61,8 +111,6 @@
         </div>
       </div>
     </header>
-
-    <!-- Gallery Section -->
     <section class="gallery">
       <div class="gallery__grid">
         <div class="gallery__item gallery__item--large">
@@ -92,35 +140,60 @@
         <div class="gallery__item gallery__item--small">
           <img src="images/8.png" alt="Gallery Image 3" />
         </div>
+        <div class="gallery__item gallery__item--medium">
+          <video width="700" height="400" controls>
+            <source src="media/printing2.mp4" type="video/mp4" />
 
-        <!-- Add more gallery items as needed -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gallery__item gallery__item--medium">
+          <video width="700" height="400" controls>
+            <source src="media/printing3.mp4" type="video/mp4" />
+
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer__container">
-        <!-- Footer navigation links -->
         <div class="footer__nav">
           <ul class="footer__nav-list">
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="latestShoots.html">LATEST SHOOTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="crossReference.html">REFERENCE</a></li>
           </ul>
         </div>
-
-        <!-- Footer contact information -->
         <div class="footer__contact">
-          <p>Email: frederic@franci.com</p>
-          <p>Phone: +1 416 291 3821/p></p>
-          <p>Toronto, Canada</p>
+          <p class="footer__contact-info" data-contact-type="email">
+            Email: frederic@franci.com
+          </p>
+          <p class="footer__contact-info" data-contact-type="phone">
+            Phone: +1 416 291 3821
+          </p>
+          <p class="footer__contact-info" data-contact-type="address">
+            Toronto, Canada
+          </p>
         </div>
-
-        <!-- Footer social media links -->
         <div class="footer__social">
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
-          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <div class="hero__wrap__social">
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.twtitter.com" target="_blank">
+              <img src="images/twitter.png" alt="Instagram" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="images/youtube.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="Instagram" />
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__copyright">

@@ -4,16 +4,14 @@
   Comp 2681 - Web Site Design and Development 
   (Winter 2024 Sharma)
 
-  Style Sheet for My Personal Website
+  Style Sheet for Frederic's Website
   Author: Yanek Keshavjee
-  Date: August 15, 2024
+  Date: September 29, 2024
 
   Filename: styles.css
 
 */
-
 /* HTML and Body Styles */
-
 :root {
   --base: #0f161b;
   --orange: #ff9900;
@@ -126,13 +124,22 @@ p {
   height: 65px;
 }
 
+.navbar__wrap__right {
+  display: none;
+}
+
 .navbar__wrap__left > a img {
   margin-top: 1rem;
   cursor: pointer;
   max-width: 60px;
+  transition: transform 0.5s ease-in-out;
 }
 
-/* Burger Menu Styles */
+.navbar__wrap__left > a img:hover {
+  transform: rotate(360deg);
+}
+
+/* ************ Burger Menu Styles ************** */
 .burger-menu {
   display: flex;
   flex-direction: column;
@@ -161,7 +168,7 @@ ul.submenu {
   width: 40%;
   height: 96.5vh;
   border: 1px solid #ddd;
-  padding-top: 60px; /* Moves the items down */
+  padding-top: 60px;
 }
 
 ul.submenu li {
@@ -215,13 +222,46 @@ ul.submenu li:last-child {
 @media (min-width: 1200px) {
   .navbar {
     padding-left: 10rem;
-    padding-right: 12rem;
+    padding-right: 8rem;
+    margin-bottom: 4rem;
+  }
+
+  .navbar__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+  }
+  .navbar__wrap__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar__wrap__right ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .navbar__wrap__right ul > li {
+    margin-right: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .navbar__wrap__right ul li:hover {
+    color: var(--orange);
+  }
+
+  .burger-menu {
+    display: none;
   }
 }
 
-/* Mobile-first default styling */
-
-/* General container for hero section */
+/* ********** HERO SECTION *********** */
 .hero {
   display: flex;
   flex-direction: column;
@@ -232,38 +272,34 @@ ul.submenu li:last-child {
   height: 83vh;
 }
 
-/* Large background text */
 .hero__background-text {
+  background-clip: content-box;
+  background-origin: padding-box;
   position: absolute;
-  top: 40%; /* Center vertically */
-  left: 40%; /* Center horizontally */
-  transform: translate(
-    -50%,
-    -60%
-  ); /* Center both horizontally and vertically */
-  font-size: 20vw; /* Dynamic font size relative to viewport width */
-  font-weight: 900; /* Make it bold */
-  color: rgba(255, 255, 255, 0.04); /* Subtle white with low opacity */
-  z-index: 0; /* Ensure it stays behind other content */
-  white-space: nowrap; /* Prevents the text from breaking into two lines */
-  pointer-events: none; /* Ensure it's not clickable */
-  user-select: none; /* Prevent text from being selectable */
-  overflow: hidden; /* Prevents text from overflowing */
-  width: 100%; /* Ensure it takes up the entire width of the viewport */
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -60%);
+  font-size: 17vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.04);
+  z-index: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  width: 100%;
 }
 
-/* Adjust the z-index of .hero__wrap to place it above the text */
 .hero__wrap {
-  margin-top: 1rem;
+  margin-top: 6rem;
   position: relative;
-  z-index: 1; /* Ensure content appears above the background text */
+  z-index: 1;
 }
 
 .hero__wrap {
   width: 50%;
 }
 
-/* Left side of hero section (text) */
 .hero__wrap__left {
   text-align: center;
   width: 100%;
@@ -283,7 +319,18 @@ ul.submenu li:last-child {
   margin-bottom: 2rem;
 }
 
+.drop-cap::first-letter {
+  float: left;
+  font-size: 4em;
+  line-height: 0.2;
+  padding-right: 0px;
+  padding-top: 0px;
+  font-weight: bold;
+  color: var(--orange);
+}
+
 .hero__wrap__byline {
+  display: none;
   margin-bottom: 0.4rem;
 }
 
@@ -293,33 +340,59 @@ ul.submenu li:last-child {
   width: 24px;
 }
 
-.hero__wrap__social {
+.hero__wrap__social img {
   margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
+  width: 50px;
+  margin: 10px;
+  display: inline-block;
+  animation: spin 20s infinite linear;
 }
 
-.hero__wrap__social > img {
+.hero__wrap__event {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Define the spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero__wrap__social > a img {
+  cursor: pointer;
   margin-right: 10px;
   width: 24px;
 }
 
-/* Right side of hero section (image) */
 .hero__wrap__right {
   margin: 20px;
   width: 90%;
+  margin-bottom: 10rem;
 }
 
 .hero__wrap__right img {
-  max-width: 65%;
-  height: 50%;
+  max-width: 45%;
+  height: 10%;
   object-fit: cover;
   display: block;
   margin: 0rem auto 1rem;
 }
 
-/* Media Queries for larger screens (Tablets and Desktops) */
-@media (min-width: 950px) {
-  /* Layout changes to side-by-side */
+@media only screen and (min-width: 700px) {
+  .hero__wrap__right img {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 800px) {
   .body {
     height: 100vh;
   }
@@ -329,7 +402,7 @@ ul.submenu li:last-child {
     justify-content: space-between;
     padding: 0 50px;
     box-sizing: border-box;
-    height: calc(100vh - 180px); /* Subtract the navbar height */
+    height: calc(100vh - 180px);
   }
 
   .hero__wrap {
@@ -337,11 +410,19 @@ ul.submenu li:last-child {
   }
 
   .hero__wrap__left {
-    flex-grow: 3; /* Allows the left section to grow */
+    flex-grow: 3;
     text-align: left;
     margin-right: 1rem;
-    padding-left: 5rem; /* Initial padding */
-    transition: padding-left 0.5s ease; /* Smooth transition for text movement */
+    padding-left: 5rem;
+    transition: padding-left 0.5s ease;
+  }
+
+  .hero__wrap__name {
+    font-size: 7rem;
+  }
+
+  .hero__wrap__byline {
+    display: block;
   }
 
   .hero__wrap__right {
@@ -357,25 +438,20 @@ ul.submenu li:last-child {
     max-width: 700px;
   }
 
-  .hero__wrap__right img:not(:first-of-type) {
-    /* display: none; */
-  }
-
-  .hero__wrap__name {
-    /* font-size: 48px; */
-  }
-
   .hero__wrap__social {
     display: flex;
     flex-direction: row;
   }
+
+  .hero__wrap__event {
+    align-items: start;
+  }
 }
 
-/* Media Query for very large screens */
 @media (min-width: 1200px) {
   .hero__wrap__left {
-    flex-grow: 4; /* Left section grows more */
-    padding-left: 12rem; /* Move text further right */
+    flex-grow: 4;
+    padding-left: 12rem;
   }
 
   .hero__wrap__right {
@@ -387,15 +463,14 @@ ul.submenu li:last-child {
   }
 }
 
-/* Extra-large screen */
 @media (min-width: 1600px) {
   .hero__wrap__left {
-    padding-left: 18rem; /* Move text even further right on very large screens */
+    padding-left: 18rem;
   }
 }
 
-/* FOOTER */
-/* Footer main container */
+/* *********** FOOTER ************ */
+
 .footer {
   border-top: 1px solid var(--slate);
   background-color: var(--base);
@@ -406,15 +481,14 @@ ul.submenu li:last-child {
 
 .footer__container {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  justify-content: space-between; /* Spreads items evenly */
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Footer navigation links */
 .footer__nav-list {
   list-style: none;
   padding: 0;
@@ -432,16 +506,14 @@ ul.submenu li:last-child {
 }
 
 .footer__nav-list a:hover {
-  color: #ff9900; /* Add hover effect */
+  color: #ff9900;
 }
 
-/* Footer contact information */
-.footer__contact p {
+.footer__contact p + a {
   margin: 0.5rem 0;
   font-size: 1rem;
 }
 
-/* Footer social media links */
 .footer__social a {
   color: #fff;
   margin: 0 1rem;
@@ -450,21 +522,31 @@ ul.submenu li:last-child {
 }
 
 .footer__social a:hover {
-  color: #ff9900; /* Add hover effect */
+  color: #ff9900;
 }
 
-/* Copyright section */
 .footer__copyright {
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #bbb;
+  color: hsla(0, 0%, 73%, 1);
 }
 
-/* Responsive footer: Mobile-first */
+.footer__contact-info[data-contact-type="email"] {
+  color: rgba(155, 89, 182, 0.9);
+}
+
+.footer__contact-info[data-contact-type="phone"] {
+  color: rgba(52, 152, 219, 0.9);
+}
+
+.footer__contact-info[data-contact-type="address"] {
+  color: rgba(219, 52, 52, 0.9);
+}
+
 @media (max-width: 768px) {
   .footer__container {
     flex-direction: column;
-    text-align: center; /* Center items on small screens */
+    text-align: center;
   }
 
   .footer__social {
@@ -476,16 +558,21 @@ ul.submenu li:last-child {
   }
 }
 
-/* Responsive footer: Larger screens */
 @media (min-width: 768px) {
   .footer__nav,
   .footer__contact,
   .footer__social {
-    flex: 1; /* Each section takes equal space */
+    flex: 1;
     text-align: left;
   }
 
   .footer__nav {
-    text-align: center; /* Center nav links on larger screens */
+    text-align: center;
+  }
+
+  .footer__copyright {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
 }

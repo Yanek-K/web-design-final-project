@@ -1,4 +1,17 @@
-/* General Styles */
+@charset "utf-8";
+
+/*
+  Comp 2681 - Web Site Design and Development 
+  (Winter 2024 Sharma)
+
+  Style Sheet for My Frederic's Website
+  Author: Yanek Keshavjee
+  Date: September 29, 2024
+
+  Filename: about.css
+
+*/
+
 body {
   font-family: var(--primary-font-family);
   margin: 0;
@@ -11,14 +24,25 @@ body {
   margin: 4rem;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-family: var(--primary-font-family);
 }
 
 .about__hero__image {
   display: none;
+  opacity: 0.7;
 }
 
 .about__wrap__intro {
   margin: 4rem;
+  color: white;
+  line-height: 1.7rem;
+  letter-spacing: 0.13rem;
+}
+
+.about__wrap__intro .intro__right {
+  box-shadow: 0 8px 15px rgba(106, 105, 105, 0.3);
+  padding: 1rem;
 }
 
 .about__wrap__experience {
@@ -28,6 +52,7 @@ body {
 .about__wrap__experience > h2 {
   font-family: var(--secondary-font-family);
   color: var(--white);
+  text-shadow: 2px 2px 4px hsl(240, 100%, 50%);
 }
 
 .about__wrap__experience > ul li {
@@ -42,6 +67,7 @@ body {
 }
 
 .about__wrap__clients > h2 {
+  text-shadow: 2px 2px 4px hsl(240, 100%, 50%);
   font-family: var(--secondary-font-family);
   color: var(--white);
 }
@@ -52,9 +78,7 @@ body {
   padding: 0.2rem;
 }
 .about__gallery {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
+  display: none;
 }
 
 .about__gallery__images {
@@ -111,8 +135,7 @@ body {
 
   .about__hero__text {
     width: 40%;
-    color: white;
-    font-family: var(--secondary-font-family);
+
     letter-spacing: 0.03rem;
     position: relative;
     z-index: 101;
@@ -121,41 +144,59 @@ body {
   }
 
   .about__wrap__intro {
+    width: 100%;
+    margin-top: 40rem;
+  }
+
+  .about__wrap__intro .intro__right {
+    padding: 3rem;
+  }
+
+  .about__wrap__intro:last-child {
     width: 80%;
-    margin-top: 30rem;
+    margin-top: 13rem;
+  }
+  #second__intro {
+    margin-top: -30rem;
+  }
+
+  #second__intro__line {
+    margin-top: -15rem;
   }
 
   .intro {
     display: flex;
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
+    justify-content: center;
+    align-items: center;
     position: relative;
   }
 
   .intro__left {
-    width: 2px; /* Line width */
-    height: 9rem; /* Line height */
-    background-color: var(--white); /* Color of the line */
+    width: 2px;
+    height: 22rem;
+    background-color: var(--white);
     position: absolute;
-    top: 72%; /* Center vertically */
-    left: 55%; /* Center horizontally */
-    transform: translate(
-      -50%,
-      -50%
-    ); /* Adjust to make sure it's perfectly centered */
+    top: 72%;
+    left: 10%;
+    transform: translate(-50%, -70%);
   }
 
   .intro__right {
-    color: var(--white);
-    left: 54%;
+    left: 14%;
     position: absolute;
-    max-width: 50%; /* Limit text width */
-    margin-left: 2rem; /* Space between the line and the text */
+    max-width: 70%;
+    margin-left: 2rem;
     padding-left: 1rem;
+    margin-bottom: 10rem;
+  }
+
+  .intro__right > ol {
+    margin-top: 1rem;
+    margin-left: 1rem;
   }
 
   .about__wrap__experience {
-    margin-top: 6rem;
+    margin-top: 10rem;
     transform: translateX(-10rem);
     display: flex;
     flex-direction: row;
@@ -181,10 +222,13 @@ body {
 
   .about__gallery {
     display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    display: flex;
     flex-direction: row;
-    justify-content: center; /* Center the images horizontally */
-    align-items: center; /* Center the images vertically */
-    margin-top: 8rem; /* Optional: Adjust to add space above */
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
   }
 
   .about__gallery__images {
@@ -192,7 +236,7 @@ body {
     flex-direction: row;
     width: 60%;
     display: flex;
-    gap: 4rem; /* Create 4rem of space between the two images */
+    gap: 4rem;
   }
 
   .about__gallery__images img {
@@ -226,7 +270,7 @@ body {
   }
 
   .about__wrap__quote {
-    margin-top: 8rem;
+    margin-top: 4rem;
     margin-bottom: 8rem;
     display: flex;
     flex-direction: row;
@@ -253,7 +297,8 @@ body {
 
     .about__wrap__intro {
       width: 80%;
-      margin-top: 25rem;
+      margin-top: 35rem;
+      margin-left: 10rem;
     }
   }
 }
