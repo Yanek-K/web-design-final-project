@@ -1,0 +1,70 @@
+.reference {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+}
+
+.reference__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
+}
+
+.reference__left {
+  text-align: center;
+  padding: 0;
+}
+
+.reference__left > h1 {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+.reference__right > h2 {
+  font-size: 2.5rem;
+}
+
+.reference__right > ul,
+h3 {
+  color: white;
+  margin: 4rem 0 0.2rem 0;
+}
+
+.reference__right > ul,
+h4 {
+  font-size: 1.6rem;
+  color: white;
+  margin: 1rem 0 0.2rem 0;
+}
+
+.nineWebsites {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nineWebsites ol li {
+  list-style-type: none;
+  font-size: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.nineWebsites ol li a:hover {
+  color: var(--orange);
+}
+
+.nineWebsites ol li p {
+  width: 100%;
+  margin: 0.5rem auto;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .nineWebsites ol li p {
+    width: 70%;
+    margin: 0.5rem auto;
+  }
+}

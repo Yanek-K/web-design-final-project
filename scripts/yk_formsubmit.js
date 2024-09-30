@@ -1,22 +1,12 @@
 /*
-   New Perspectives on HTML and CSS, 7th Edition
-   Tutorial 7
-   Tutorial Case
+  Comp 2681 - Web Site Design and Development 
+  (Winter 2024 Sharma)
 
+  Script to submit the form when the user has filled it in and clicked submit
+  Author: Yanek Keshavjee
+  Date: September 24, 2024
 
-   Filename: yk_formsubmit.js
-
-   Purpose: The purpose of this program is to simply report on a
-            successful completition of a valid Web form.
-
-            When the form is submitted, the onsubmit event handler
-            verifies that the form data is complete and valid.
-            An alert box is displayed notifying the user.
-
-            The event function returns a value of false so that the
-            student does not have to continually retype test values
-            in the survey form.
-
+  filename: yk_formSubmit.js
 
 */
 

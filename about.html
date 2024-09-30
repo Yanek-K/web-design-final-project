@@ -27,6 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <script src="./scripts/highlight.js" defer></script>
 
     <title>Frederic Franci.</title>
   </head>
@@ -112,7 +113,7 @@
       </div>
     </header>
 
-    <section class="about__wrap__hero">
+    <section class="about__wrap__hero" id="flex">
       <div>
         <div class="about__hero__image">
           <img src="images/photographer.png" />
@@ -145,7 +146,7 @@
       <div class="intro">
         <div></div>
         <div class="intro__left"></div>
-        <div class="intro__right">
+        <div class="intro__right" id="position">
           <blockquote>
             In the quiet moments before dawn, where the city’s heartbeat echoes
             through empty streets, Frederic Franci captures fleeting stories
@@ -183,15 +184,14 @@
     </section>
 
     <section class="about__gallery">
-      <div class="about__gallery__images">
+      <div class="about__gallery__images" id="opacity">
         <img src="images/1.png" />
         <img src="images/5.png" />
       </div>
     </section>
-
     <section>
       <div class="about__wrap__clients">
-        <h2>Clients</h2>
+        <h2 id="contextualSelectors">Clients</h2>
         <ul>
           <li>FPC</li>
           <li>Gallery44</li>
@@ -254,7 +254,7 @@
             <li><a href="crossReference.html">REFERENCE</a></li>
           </ul>
         </div>
-        <div class="footer__contact">
+        <div class="footer__contact" id="RGBAAndHSLA">
           <p class="footer__contact-info" data-contact-type="email">
             Email: frederic@franci.com
           </p>

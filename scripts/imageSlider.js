@@ -1,3 +1,15 @@
+/*
+  Comp 2681 - Web Site Design and Development 
+  (Winter 2024 Sharma)
+
+  Script to create an image slider for the home page
+  Author: Yanek Keshavjee
+  Date: September 24, 2024
+
+  filename: imageSlider.js
+
+*/
+
 document.addEventListener("DOMContentLoaded", function () {
   const images = [
     "images/portrait.png",
